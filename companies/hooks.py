@@ -117,6 +117,7 @@ permission_query_conditions = {
     "Company": "companies.company_permissions.get_permission_query_conditions",
     "Department": "companies.department_permissions.get_permission_query_conditions",
     "Project": "companies.project_permissions.get_permission_query_conditions",
+    "Performance Review": "companies.performance_review_permissions.get_permission_query_conditions",
 }
 
 has_permission = {
@@ -124,6 +125,7 @@ has_permission = {
     "Company": "companies.company_permissions.has_permission",
     "Department": "companies.department_permissions.has_permission",
     "Project": "companies.project_permissions.has_permission",
+    "Performance Review": "companies.performance_review_permissions.has_permission",
 }
 
 # DocType Class

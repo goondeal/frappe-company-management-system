@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2025-01-11 17:35:12.437623",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -10,7 +10,9 @@
   "review_date",
   "feedback",
   "manager_comments",
-  "status"
+  "status",
+  "company",
+  "department"
  ],
  "fields": [
   {
@@ -45,14 +47,29 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Pending Review\nReview Scheduled\nFeedback Provided\nUnder Approval\nReview Approved\nReview Rejected"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "department",
+   "options": "Department"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-11 18:58:55.342740",
+ "modified": "2025-01-13 01:24:07.698546",
  "modified_by": "Administrator",
  "module": "Companies",
  "name": "Performance Review",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -102,5 +119,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "employee"
 }
