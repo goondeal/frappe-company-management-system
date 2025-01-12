@@ -8,8 +8,10 @@
   "section_break_jcgy",
   "company",
   "department",
+  "role",
   "employee_name",
   "email",
+  "password",
   "mobile_number",
   "address",
   "designation",
@@ -79,11 +81,24 @@
    "is_virtual": 1,
    "label": "Days Employed",
    "read_only": 1
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "label": "Role",
+   "options": "Admin\nManager\nEmployee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-11 15:46:50.871187",
+ "modified": "2025-01-12 17:06:49.082711",
  "modified_by": "Administrator",
  "module": "Companies",
  "name": "Employee",
@@ -101,6 +116,38 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1
   }
  ],
  "sort_field": "modified",
