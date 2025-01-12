@@ -98,7 +98,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-12 17:06:49.082711",
+ "modified": "2025-01-13 00:45:45.393793",
  "modified_by": "Administrator",
  "module": "Companies",
  "name": "Employee",
@@ -150,7 +150,9 @@
    "share": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "email"
 }
