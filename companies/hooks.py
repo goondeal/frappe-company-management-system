@@ -70,6 +70,8 @@ app_license = "mit"
 # before_install = "companies.install.before_install"
 # after_install = "companies.install.after_install"
 
+after_install = "companies.after_install.create_roles"
+
 # Uninstallation
 # ------------
 
