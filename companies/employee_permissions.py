@@ -6,11 +6,16 @@ def get_permission_query_conditions(user):
     if user == "Administrator":
         return ""
     print('roles', roles)
-    if "Admin" in roles or "Manager" in roles:
+    if "Admin" in roles:
         # Get the company associated with the user
         company = frappe.get_value("Employee", {"email": user}, "company")
         if company:
             return f"`tabEmployee`.`company` = '{company}'"
+    if "Manager" in roles:
+        # Get the company associated with the user
+        department = frappe.get_value("Employee", {"email": user}, "department")
+        if department:
+            return f"`tabEmployee`.`department` = '{department}'"
     if "Employee" in roles:
         return f"`tabEmployee`.`user` = '{user}'"
     return ""
