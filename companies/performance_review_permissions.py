@@ -15,6 +15,7 @@ def get_permission_query_conditions(user):
         # Get the department associated with the user
         department = frappe.get_value(
             "Employee", {"email": user}, "department")
+        print("department", department)
         if department:
             return f"`tabPerformance Review`.`department` = '{department}'"
     if "Employee" in roles:
@@ -31,9 +32,9 @@ def has_permission(doc, user):
     if "Admin" in roles:
         company = frappe.get_value(
             "Employee", {"email": user}, "company")
-        return doc.company == company
+        return not doc.company or doc.company == company
     if "Manager" in roles:
         department = frappe.get_value(
             "Employee", {"email": user}, "department")
-        return doc.department == department
+        return not doc.department or doc.department == department
     return False

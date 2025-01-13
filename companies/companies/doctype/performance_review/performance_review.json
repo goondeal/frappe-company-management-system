@@ -6,13 +6,14 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_qpqn",
+  "status",
   "employee",
   "review_date",
   "feedback",
   "manager_comments",
-  "status",
   "company",
-  "department"
+  "department",
+  "amended_from"
  ],
  "fields": [
   {
@@ -45,6 +46,7 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Pending Review\nReview Scheduled\nFeedback Provided\nUnder Approval\nReview Approved\nReview Rejected"
   },
@@ -61,11 +63,22 @@
    "hidden": 1,
    "label": "department",
    "options": "Department"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Performance Review",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-01-13 01:24:07.698546",
+ "modified": "2025-01-13 01:49:27.054453",
  "modified_by": "Administrator",
  "module": "Companies",
  "name": "Performance Review",
@@ -94,6 +107,7 @@
    "report": 1,
    "role": "Admin",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -105,6 +119,7 @@
    "report": 1,
    "role": "Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
