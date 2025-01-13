@@ -20,6 +20,8 @@ class Employee(Document):
 
     def validate(self):
         user = frappe.session.user
+        if not user:
+            frappe.throw("Login to proceed")
         if user == "Administrator":
             return
         roles = frappe.get_roles(user)
@@ -31,6 +33,9 @@ class Employee(Document):
             frappe.throw(
                 "You do not have permission to create an Employee for another company")
             return
+        dept_company = frappe.get_value("Department", self.department, "company")
+        if self.company != dept_company:
+            frappe.throw(f"Department {self.department} does not belong to the company: {self.company}")
     # before insert create a user for this employee
 
     def before_insert(self):

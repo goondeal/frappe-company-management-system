@@ -17,7 +17,7 @@ def get_permission_query_conditions(user):
         if department:
             return f"`tabEmployee`.`department` = '{department}'"
     if "Employee" in roles:
-        return f"`tabEmployee`.`user` = '{user}'"
+        return f"`tabEmployee`.`email` = '{user}'"
     return ""
 
 
