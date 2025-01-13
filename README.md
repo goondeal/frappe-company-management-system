@@ -3,6 +3,7 @@
 
 ## **📚 Table of Contents**  
 - [Overview](#-overview)  
+- [Installation](#-installation)  
 - [Approach and Implementation Details](#-1-approach-and-implementation-details)  
 - [Task Completion Checklist](#-2-task-completion-checklist)  
 - [Security Measures](#-3-security-measures)  
@@ -13,6 +14,19 @@
 ---
 ## 📖 **Overview**  
 This is a backend application built on the Frappe framework that provides CRUD operations for managing companies, departments, employees, and projects. It includes a workflow for employee performance reviews and implements role-based access control for secure data handling.  
+
+## ⚙️ **Installation**  
+Setting up the application is straightforward. Follow these steps to install and add the app to your Frappe site:
+from your frappe-bench folder:
+1. **Clone the Repository**:  
+   ```bash  
+   bench get app https://github.com/goondeal/frappe-company-management-system.git 
+   ```
+2. **Add it to your site**:  
+   ```bash  
+   bench --site <your-site-name> install-app companies
+   bench restart
+   ```
 
 ## **1. 🛠️ Approach and Implementation Details**  
 
